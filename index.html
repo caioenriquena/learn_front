@@ -2,62 +2,164 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Aprendendo - HTML</title>
-</head>
-<style>
-    body{
-        font-family: Arial, sans-serif;
-            background-color: #f5f2f8;
-            margin: 0;
-            padding: 0;
-        
-    }
-    header {
-            background-color: #1f0637;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fomulário | Ação</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(to right, darkred, black);
         }
-   p{
-    font-size: 18px;
-    line-height: 1.6;
-   }
-   h1{
-    font-size: 36px;
-   }
+        .box{
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 15px;
+            border-radius: 15px;
+            width: 20%;
+        }
+        fieldset{
+            border: 3px solid darkred;
+            border-radius: 20px;
+        }
+        legend{
+            border: 1px solid darkred;
+            padding: 10px;
+            text-align: center;
+            background-color: darkred;
+            border-radius: 10px;
+            
+        }
+        .inputBox{
+            position: relative;
+        }
+        .inputUser{
+            background: none;
+            border: none;
+            border-bottom: 1px solid white;
+            outline: none;
+            color: white;
+            font-size: 15px;
+            width: 100%;
+            letter-spacing: 2px;
+        }
+        .labelInput{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            pointer-events: none;
+            transition: .5s;
+        }
+        .inputUser:focus ~ .labelInput,
+        .inputUser:valid ~ .labelInput{
+            top: -20px;
+            font-size: 12px;
+            color: darkred;
+        }
+        #data_nascimento{
+            border: none;
+            padding: 8px;
+            border-radius: 10px;
+            outline: none;
+            font-size: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #enviar{
+            background-image: linear-gradient(to right,rgba(17, 17, 17, 0.945), rgba(240, 4, 4, 0.815));
+            width: 100%;
+            border: none;
+            padding: 15px;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        #enviar:hover{
+            background-image: linear-gradient(to right,rgba(17, 17, 17, 0.151), rgb(240, 4, 4));
+        }
+       
 
-   
-</style>
+
+        
+
+    </style>
+</head>
 <body>
-    <header>
-        <h1>Conheça o MIMO - Seu Aplicativo de Aprendizado</h1>
-    </header>
- <section> 
-<h2><u>MIMO</u></h2>
-<p>Vamos conhecer mais sobre o aplicativo Mimo, disponibilizado pela play store e que ajuda pessoas iniciantes na área de programação a aprender com facilidade e praticidade.   
-</p>
-<p>
-   <em>Mimo é um aplicativo muito parecido com o famoso Duolingo. Mas ao invés de te ensinar uma nova língua, o Mimo tem como objetivo apresentar a iniciantes a prática da programação.</em> 
-   De acordo com um estudo da Universidade de Oxford, 47% dos postos de trabalho correm sério risco de serem completamente automatizados em até duas décadas. Em outras palavras, até 2034, milhões de trabalhadores perderão seus empregos para robôs. Mas em contrapartida, existe uma área que está indo na contramão dessa tendência, por ser direta ou indiretamente ligada às profissões do futuro, como a programação em geral.
-  
-   
-    <h3>Recursos Principais</h3>
- <ul>
-    <li>Javascript</li>
-    <li>HTML</li>
-    <li>CSS</li>
-    <li>SQL</li>
-    <li>Python</li>
-</ul>
-   
-   O aplicativo oferece uma linha de tempo e o progresso de seu aprendizado.
+    <div class="box">
+        <form  action="proxima_pagina.html" method="get">
+            
+            <fieldset>
+                
+                <legend><b>Pesquisa de Satisfação</b></legend>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="gosto" id="gosto" class="inputUser" required>
+                    <label for="gosto" class="labelInput">Gosto músical </label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="como_chegou" id="como_chegou" class="inputUser" required>
+                    <label for="como_chegou" class="labelInput">Como chegou aqui?</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="informe" id="informe" class="inputUser" required>
+                    <label for="informe" class="labelInput">Informe o que achou da plataforma</label>
+                </div>
+                    
+                    <p>Nota para plataforma
+                        <br><br>
+                        
+                        <input type="radio" name="nota1"  id="nota1" value="nota1">
+                        <label for="nota1">1</label>
+                        <br><br>
+                        <input type="radio" name="nota2"  id="nota2" value="nota2">
+                        <label for="nota2">2</label>
+                        <br><br>
+                        <input type="radio" name="nota3"  id="nota3" value="nota3">
+                        <label for="nota3">3</label>
+                        <br><br>
+                        <input type="radio" name="nota4"  id="nota4" value="nota4">
+                        <label for="nota4">4</label>
+                        <br><br>
+                        <input type="radio" name="nota5"  id="nota5" value="nota5">
+                        <label for="nota5">5</label>
 
-   <p><a href="https://play.google.com/store/apps/details?id=com.getmimo&hl=pt_BR&gl=US">Baixe o MIMO</a></p>
-   
-</p>
-    <h4>Veja Fotos da Interface</h4>
-    <p>Clique no botão abaixo para visualizar fotos da incrível interface do aplicativo MIMO:</p>
-    <a href="pagina2.html"><button>Ver Fotos</button></a>
-</section>  
+                    </p>
+                    <br>
+                    
+                    <label for="data_nascimento"><b>Informe sua data de nascimento</b></label>
+                    <input type="date" name="data_nascimento" id="data_nascimento"  required>
+                        
+                        
+                        
+                    
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="text" name="cidade" id="cidade" class="inputUser" required>
+                        <label for="data_nascimento" class="labelInput"> Cidade:</label>
+                        
+                        
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="text" name="estado" id="estado" class="inputUser" required>
+                        <label for="estado" class="labelInput">Estado:</label>
+                        
+                        
+                    </div>
+                    <br><br>
+                   
+                    <input type="submit" name="enviar" id="enviar" href="proxima_pagina" >
+                   
+                </div>
+
+            </fieldset>
+
+        </form>
+
+    </div>
 </body>
 </html>
